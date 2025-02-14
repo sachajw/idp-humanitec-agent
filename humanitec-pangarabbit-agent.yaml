@@ -1,0 +1,15 @@
+# Humanitec agent config for private clusters
+apiVersion: entity.humanitec.io/v1b1
+kind: Definition
+metadata:
+  id: ${AGENT_ID}
+entity:
+  type: agent
+  name: ${AGENT_ID}
+  driver_type: humanitec/agent
+  driver_inputs:
+    values:
+      id: ${AGENT_ID}
+  criteria:
+  - env_type: development
+    res_id: agent
